@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const prompt = `${direction} ${userInput}`;
 
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 10000); // ⏱ 10 วินาที timeout
+    const timeout = setTimeout(() => controller.abort(), 100000); 
 
     const response = await fetch(OLLAMA_ENDPOINT, {
       method: 'POST',

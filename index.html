@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typhoon Translate Chat</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500&family=Noto+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
+</head>
+<body>
+  <div class="chat-container">
+    <header class="chat-header">
+      <button class="icon-button" id="settings-button" title="Settings"><i class="fa-solid fa-gear"></i></button>
+      <button class="icon-button" id="theme-switcher" title="Toggle Theme">
+        <i class="fa-solid fa-sun icon-sun"></i>
+        <i class="fa-solid fa-moon icon-moon"></i>
+      </button>
+      <h1>Typhoon Translate</h1>
+      <p>เครื่องมือแปลภาษาพลัง AI</p>
+    </header>
+
+    <main class="messages-panel" id="chat-window">
+      <article class="message bot-message">
+      </article>
+    </main>
+
+    <form class="chat-input-form" id="chat-form">
+      <textarea id="message-input" placeholder="พิมพ์ข้อความแล้วกด Enter เพื่อส่ง..." rows="1"></textarea>
+      <button type="submit" title="Send"><i class="fa-solid fa-paper-plane"></i></button>
+    </form>
+  </div>
+
+  <dialog id="settings-modal" class="modal-overlay">
+    <div class="modal-content">
+      <h2>ตั้งค่า (Settings)</h2>
+      <div class="form-group">
+        <label for="model-name-input">ชื่อโมเดล (Ollama Model Name)</label>
+        <input type="text" id="model-name-input" />
+      </div>
+      <div class="form-group">
+        <label for="system-prompt-input">System Prompt (Optional)</label>
+        <textarea id="system-prompt-input" rows="3" placeholder="เช่น: จงแปลข้อความต่อไปนี้ให้เป็นภาษาทางการเท่านั้น"></textarea>
+      </div>
+      <div class="modal-actions">
+        <button id="save-settings-button" class="button-primary">บันทึก</button>
+        <button id="close-settings-button" class="button-secondary">ยกเลิก</button>
+      </div>
+    </div>
+  </dialog>
+
+  <div id="toast-container"></div>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

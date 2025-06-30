@@ -1,6 +1,3 @@
-# typhoon-translate-ui
-UI สำหรับแปลภาษาไทย ↔ อังกฤษ ด้วย AI (ผ่าน Ollama) รองรับ Markdown ใช้งานง่ายและรวดเร็ว
-
 # 🌐 Typhoon Translate UI
 
 A real-time Markdown-aware translation web app for Thai/English powered by Ollama and local LLMs.
@@ -9,30 +6,70 @@ A real-time Markdown-aware translation web app for Thai/English powered by Ollam
 
 ## 🚀 Features
 
-- 🔁 Auto-detect language and translate TH↔EN
-- ✨ Preserve Markdown formatting
-- 🌗 Light/Dark theme toggle
-- 💬 Copyable translated result
-- ⚙️ Customizable model and system prompt
-- 🔒 No API key required (runs locally via Ollama)
+- 🔁 Auto-detect language: TH → EN / EN → TH
+- ✨ Preserve Markdown formatting (headings, lists, bold, etc.)
+- 🌗 Toggle dark/light theme
+- ⚙️ Configurable model and system prompt
+- 💬 Copy translated result with one click
+- 🔒 Fully local (no API keys or internet needed)
 
 ---
 
 ## 📦 Installation
 
-1. **Install Ollama**  
-   → https://ollama.com
+### 1. Install [Ollama](https://ollama.com)
 
-2. **Pull model**  
-   (e.g. `scb10x/typhoon-translate-4b`)
-   ```bash
-   ollama pull scb10x/typhoon-translate-4b
-3. **Clone & Run**
-  git clone https://github.com/yourname/typhoon-translate-ui.git
-  cd typhoon-translate-ui
-  open index.html
+```bash
+brew install ollama       # on macOS
+winget install Ollama.Ollama  # on Windows
+```
+
+### 2. Pull the model
+
+```bash
+ollama pull scb10x/typhoon-translate-4b
+```
+
+### 3. Clone and Run
+
+```bash
+git clone https://github.com/Suphanat1722/typhoon-translate-ui.git
+cd typhoon-translate-ui
+open index.html   # or double-click index.html
+```
+
+---
+
+## 🛠️ Tech Stack
+
+- ✅ HTML, CSS, JavaScript (Vanilla)
+- ✅ Font Awesome (icons)
+- ✅ Marked.js (Markdown parsing)
+- ✅ Ollama (local LLM backend)
+
+No frameworks, no build tools. Just open and run.
+
+---
+
+## 📄 License
+
+MIT - see [LICENSE](./LICENSE) for details.
+
+---
 
 ## 🙌 Credits
-Ollama
-Marked.js
-Thai ↔ English translation model: scb10x/typhoon-translate-4b
+
+- [Ollama](https://ollama.com)
+- [Marked.js](https://github.com/markedjs/marked)
+- Model by [SCB 10X](https://huggingface.co/scb10x/typhoon-translate-4b)
+
+---
+
+## 💡 Future Ideas
+
+- [ ] Export to PDF
+- [ ] Add language switch selector
+- [ ] Store translation history
+- [ ] Text-to-speech output
+
+> Pull requests welcome 🙏

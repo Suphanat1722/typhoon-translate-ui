@@ -51,12 +51,6 @@ No frameworks, no build tools. Just open and run.
 
 ---
 
-## 📄 License
-
-MIT - see [LICENSE](./LICENSE) for details.
-
----
-
 ## 🙌 Credits
 
 - [Ollama](https://ollama.com)
@@ -64,12 +58,3 @@ MIT - see [LICENSE](./LICENSE) for details.
 - Model by [SCB 10X](https://huggingface.co/scb10x/typhoon-translate-4b)
 
 ---
-
-## 💡 Future Ideas
-
-- [ ] Export to PDF
-- [ ] Add language switch selector
-- [ ] Store translation history
-- [ ] Text-to-speech output
-
-> Pull requests welcome 🙏
